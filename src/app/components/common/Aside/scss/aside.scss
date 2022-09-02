@@ -1,0 +1,56 @@
+.aside {
+  background-color: #fff;
+  height: 8vh;
+  min-height: 78px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav-item {
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.header__nav-link {
+  color: rgb(58, 57, 57);
+  font-weight: 600;
+  transition: color 0.25s ease-in-out;
+  &:hover {
+    color: rgb(134, 118, 226);
+  }
+}
+
+.header__nav-link.active {
+  color: rgb(134, 118, 226);
+}
+
+.header__auth-list {
+  display: flex;
+  align-items: center;
+}
+
+.header__auth-link {
+  color: rgb(58, 57, 57);
+  font-weight: 600;
+}
+
+.header__auth-item {
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
+}
