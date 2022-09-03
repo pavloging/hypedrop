@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import logo__hypedrop from "../../../assets/aside/logo.svg";
+import logo__hypedrop from "../../../assets/etc/logo.svg";
 import icon__home from "../../../assets/aside/icon__home.svg";
 import icon__streamers from "../../../assets/aside/icon__streamers.svg";
 import icon__store from "../../../assets/aside/icon__store.svg";
