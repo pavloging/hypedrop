@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $main-color;
+  margin-top: $header-height;
+  margin-left: $aside-width;
+}
+
+span,
+h1,
+h2,
+h3,
+p,
+a {
+  color: $text-color;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-family: Mulish, sans-serif;
+}
+/*Изменения скорлла*/
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--color-white);
+}

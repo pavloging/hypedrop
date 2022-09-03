@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
 import Header from "../components/common/Header";
 import Aside from "../components/common/Aside";
+import Offer from "../components/ui/Home/Offer";
+import Cover from "../components/ui/Home/Cover";
+import About from "../components/ui/Home/About";
 import Footer from "../components/common/Footer";
 
 export default function Home() {
@@ -8,18 +10,9 @@ export default function Home() {
     <>
       <Header />
       <Aside />
-      <Link to={"/streamers"}>
-        <button>streamers</button>
-      </Link>
-      <Link to={"/store"}>
-        <button>store</button>
-      </Link>
-      <Link to={"/promo"}>
-        <button>promo</button>
-      </Link>
-      <Link to={"/nopage"}>
-        <button>nopage</button>
-      </Link>
+      <Offer />
+      <Cover />
+      <About />
       <Footer />
     </>
   );

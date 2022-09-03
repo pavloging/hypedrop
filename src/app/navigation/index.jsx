@@ -13,7 +13,7 @@ export default function Navigation() {
 function RootNavigator() {
   return (
     <Switch>
-      <Route path="/" exact component={Home} />
+      <Route path="/home" exact component={Home} />
       <Route path="/streamers" exact component={Streamers} />
       <Route path="/store" exact component={Store} />
       <Route path="/promo" exact component={Promo} />

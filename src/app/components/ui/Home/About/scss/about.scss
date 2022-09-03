@@ -1,0 +1,30 @@
+.cover {
+  margin: 80px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: round;
+}
+.cover__title {
+  color: $text-white-color;
+  font-weight: 600;
+}
+.cover__scroll {
+  position: relative;
+  top: 35%;
+  animation-duration: 2s;
+  animation-name: mouse;
+}
+
+@keyframes mouse {
+  0% {
+    top: 0;
+    // transform: rotate(-10deg);
+  }
+  100% {
+    top: 35%;
+    // transform: rotate(350deg);
+  }
+}
