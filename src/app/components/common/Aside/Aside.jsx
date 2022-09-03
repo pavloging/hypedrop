@@ -11,13 +11,13 @@ export default function Aside() {
     <div className="aside">
       <div className="aside__all-icons">
         <div className="aside__icon">
-          <Link to={"/home"} className="aside__link-logo">
+          <Link to={"/"} className="aside__link-logo">
             <img className="aside__img-logo" src={logo__hypedrop} alt="logo" />
           </Link>
         </div>
 
         <div className="aside__icon">
-          <Link to={"/home"} className="aside__link">
+          <Link to={"/"} className="aside__link">
             <img className="aside__img" src={icon__home} alt="home" />
             <div className="aside__title">Главная</div>
           </Link>
