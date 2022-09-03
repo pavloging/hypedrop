@@ -30,13 +30,8 @@ export default function Aside() {
         </div>
         <div className="aside__icon">
           <Link to={"/store"} className="aside__link">
-            <img
-              className="aside__img"
-              style={{ width: "45px" }}
-              src={icon__store}
-              alt="store"
-            />
-            <div className="aside__title">Магазин</div>
+            <img className="aside__img" src={icon__store} alt="store" />
+            <div className="aside__title">Маркет</div>
           </Link>
         </div>
         <div className="aside__icon">
