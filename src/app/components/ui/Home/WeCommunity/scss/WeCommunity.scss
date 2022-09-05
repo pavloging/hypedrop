@@ -3,10 +3,72 @@
   background-color: $element-color;
   border-radius: 6px;
 
+  &__title {
+    color: $text-white-color;
+    padding: 36px;
+  }
+
+  &__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0px 8px;
+    padding: 0 0 36px;
+  }
+
   &__card {
+    margin: 12px 8px 0px;
+    border-radius: 6px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    -webkit-box-align: center;
     align-items: center;
+    background: linear-gradient(#780f65, $element-color);
+    width: 320px;
+    transition: 1s;
+
+    &:hover,
+    &.active {
+      background: linear-gradient(#890f73, $element-color);
+      width: 380px;
+    }
+  }
+
+  &__avatar {
+    width: 5vw;
+    margin-top: 24px;
+    border-radius: 20%;
+  }
+
+  &__name {
+    color: $text-white-color;
+  }
+
+  &__platforms {
+    display: flex;
+    align-items: center;
+  }
+
+  &__platforms-img {
+    width: 24px;
+  }
+
+  &__platforms-link {
+    padding: 5px;
+  }
+
+  &__button {
+    width: 80%;
+    margin-bottom: 24px;
+    background: $hover-color;
+    cursor: not-allowed;
+  }
+
+  &__button-active {
+    width: 80%;
+    margin-bottom: 24px;
+    background: $button-live-active;
   }
 }
 .lds-ellipsis {

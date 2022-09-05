@@ -6,4 +6,19 @@
   align-items: center;
   justify-content: center;
   background-repeat: round;
+  &__title {
+    color: $text-white-color;
+  }
+  &__achievements {
+    display: flex;
+  }
+  &__user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 24px;
+  }
+  &__text {
+    text-align: center;
+  }
 }
