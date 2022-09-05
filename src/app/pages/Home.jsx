@@ -3,6 +3,7 @@ import Aside from "../components/common/Aside";
 import Offer from "../components/ui/Home/Offer";
 import Cover from "../components/ui/Home/Cover";
 import About from "../components/ui/Home/About";
+import WeCommunity from "../components/ui/Home/WeCommunity";
 import Footer from "../components/common/Footer";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Offer />
       <Cover />
       <About />
+      <WeCommunity />
       <Footer />
     </>
   );
