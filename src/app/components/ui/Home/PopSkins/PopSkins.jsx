@@ -14,7 +14,12 @@ import { Link } from "react-router-dom";
 
 export default function PopSkins() {
   // const skins = RequestManager("GET", `store/items/${cs:go}/history`);
-  const skins = RequestManager("POST", "store/items/search", { game: "csgo" });
+  const skins = RequestManager("POST", "store/items/search", {
+    game: "csgo",
+    sort: "pop",
+    limit: 48,
+    min_price: 200,
+  });
 
   if (skins && skins.items.length === 50) skins.items.splice(1, 2);
 
