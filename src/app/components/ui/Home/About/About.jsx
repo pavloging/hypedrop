@@ -23,7 +23,6 @@ export default function About() {
         <div className="about__user">
           <img
             className="about__img"
-            style={{ transform: "translateX(-25px)" }}
             src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/axe.png"
             alt=""
           />

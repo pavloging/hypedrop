@@ -6,10 +6,6 @@ import youtube from "../../../../assets/home/etc/youtube-colored.svg";
 export default function WeCommunity() {
   const streamers = RequestManager("get", "streamers", null);
 
-  if (streamers) {
-    console.log(streamers);
-  }
-
   function validateLive(streamer) {
     return Object.values(streamer.platforms).some((platform) => platform.live);
   }
