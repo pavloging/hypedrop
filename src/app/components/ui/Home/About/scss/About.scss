@@ -21,6 +21,11 @@
   }
   &__img {
     width: 200px;
+    transition: 0.4s;
+    &:hover {
+      width: 220px;
+      transition: 0.4s;
+    }
   }
   &__numbers {
     padding: 15px;
@@ -31,5 +36,6 @@
   }
   &__text {
     text-align: center;
+    color: $text-white-color;
   }
 }

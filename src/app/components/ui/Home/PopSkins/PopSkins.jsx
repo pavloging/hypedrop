@@ -18,7 +18,7 @@ export default function PopSkins() {
 
   if (skins) {
     console.log(skins.items);
-    skins.items.splice(1, 2);
+    if (skins.items.length === 50) skins.items.splice(1, 2);
     console.log(skins.items);
   }
 
