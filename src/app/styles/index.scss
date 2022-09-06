@@ -66,6 +66,17 @@ a {
 html {
   font-family: Mulish, sans-serif;
 }
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  position: relative;
+  top: -20px;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  position: relative;
+  top: -20px;
+}
+
 /*Изменения скорлла*/
 ::-webkit-scrollbar {
   width: 8px;
