@@ -1,0 +1,17 @@
+.list-invite-screamers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: $aside-width;
+  border-radius: 6px;
+
+  padding: 8%;
+
+  &__title {
+    color: $text-white-color;
+    padding: 24px;
+  }
+  &__button {
+    background: $button-live-active;
+  }
+}

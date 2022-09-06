@@ -11,12 +11,23 @@
   }
   &__achievements {
     display: flex;
+    align-items: center;
   }
   &__user {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 24px;
+  }
+  &__img {
+    width: 200px;
+  }
+  &__numbers {
+    padding: 15px;
+    background: #242933;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    color: $text-white-color;
   }
   &__text {
     text-align: center;

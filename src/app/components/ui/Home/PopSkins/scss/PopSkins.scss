@@ -1,10 +1,63 @@
 .pop-skins {
   margin: $aside-width;
-  padding: 32px 20vw;
-  text-align: center;
+  background-color: $element-color;
+  border-radius: 6px;
+  padding: 36px;
+
   // display: flex;
   // align-items: center;
   // flex-direction: column;
-  background-color: $element-color;
-  border-radius: 6px;
+  &__navigate {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: $text-white-color;
+  }
+
+  &__button {
+    background: linear-gradient(
+      170deg,
+      var(--swiper-theme-color),
+      $hover-color,
+      $hover-color
+    );
+    transition: 1s;
+    &:hover,
+    &:active {
+      // padding: 0px 22px;
+      animation-duration: 2s;
+      animation-name: button;
+    }
+  }
+  @keyframes button {
+    25% {
+      filter: hue-rotate(90deg);
+    }
+    50% {
+      filter: hue-rotate(180deg);
+    }
+    75% {
+      filter: hue-rotate(270deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    padding: 12px;
+    background-color: $hover-color;
+    border-radius: 6px;
+  }
+  &__paragraph {
+    text-align: center;
+    font-size: small;
+  }
+}
+.mySwiper {
+  padding: 60px 0;
 }

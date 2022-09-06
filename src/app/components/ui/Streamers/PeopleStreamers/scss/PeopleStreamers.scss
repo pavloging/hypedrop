@@ -1,11 +1,11 @@
-.we-community {
+.people-streamers {
   margin: $aside-width;
-  background-color: $element-color;
   border-radius: 6px;
 
-  &__title {
-    color: $text-white-color;
-    padding: 36px;
+  &__box-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__container {

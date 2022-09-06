@@ -1,5 +1,6 @@
 @import "./variables.scss";
 @import "./index.scss";
+
 @import "../components/common/Header/scss/Header.scss";
 @import "../components/common/Aside/scss/Aside.scss";
 @import "../components/common/Footer/scss/Footer.scss";
@@ -8,3 +9,6 @@
 @import "../components/ui/Home/About/scss/About.scss";
 @import "../components/ui/Home/WeCommunity/scss/WeCommunity.scss";
 @import "../components/ui/Home/PopSkins/scss/PopSkins.scss";
+
+@import "../components/ui/Streamers/PeopleStreamers/scss/PeopleStreamers.scss";
+@import "../components/ui/Streamers/ListInviteScreamers/scss/ListInviteScreamers.scss";
