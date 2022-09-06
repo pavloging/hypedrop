@@ -13,7 +13,6 @@ import { Autoplay, Pagination, Navigation, Keyboard } from "swiper";
 import { Link } from "react-router-dom";
 
 export default function PopSkins() {
-  // const skins = RequestManager("GET", `store/items/${cs:go}/history`);
   const skins = RequestManager("POST", "store/items/search", {
     game: "csgo",
     sort: "pop",
@@ -53,8 +52,8 @@ export default function PopSkins() {
           modules={[Autoplay, Pagination, Navigation, Keyboard]}
           className="mySwiper"
         >
-          {skins.items.map((el) => (
-            <SwiperSlide key={el.id}>
+          {skins.items.map((el, index) => (
+            <SwiperSlide key={index}>
               <img className="pop-skins__img" src={el.icon} alt="" />
               <p className="pop-skins__paragraph">{el.ru_name}</p>
               <p className="pop-skins__paragraph">От {el.price}</p>
