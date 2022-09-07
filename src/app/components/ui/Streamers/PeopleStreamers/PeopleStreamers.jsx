@@ -20,6 +20,20 @@ export default function PeopleStreamers() {
             type="text"
           />
         </div>
+
+        <div className="people-streamers__1">
+          <div className="people-streamers__2">
+            <div className="people-streamers__3">
+              <span className="people-streamers__4">Стримы</span>
+            </div>
+          </div>
+          <div className="people-streamers__2">
+            <div className="people-streamers__3">
+              <span className="people-streamers__4">Стримеры</span>
+            </div>
+          </div>
+        </div>
+
         <div className="people-streamers__container">
           {streamers.map((el) => (
             <div className="people-streamers__card" key={el.id}>

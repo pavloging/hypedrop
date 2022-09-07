@@ -27,6 +27,22 @@
       transition: 0.4s;
     }
   }
+  &__img.axe {
+    transform: translateX(-20px);
+    width: 180px;
+    &:hover {
+      width: 200px;
+      transition: 0.4s;
+    }
+  }
+  &__img.courier {
+    width: 170px;
+    &:hover {
+      width: 190px;
+      transition: 0.4s;
+    }
+  }
+
   &__numbers {
     padding: 15px;
     background: #242933;

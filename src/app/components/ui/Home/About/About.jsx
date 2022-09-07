@@ -22,7 +22,7 @@ export default function About() {
       <div className="about__achievements">
         <div className="about__user">
           <img
-            className="about__img"
+            className="about__img axe"
             src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/axe.png"
             alt=""
           />
@@ -30,7 +30,7 @@ export default function About() {
           <h3 className="about__text">Пользователей</h3>
         </div>
         <div className="about__user">
-          <img className="about__img" src={drops} alt="" />
+          <img className="about__img courier" src={drops} alt="" />
           <h2 className="about__numbers">25</h2>
           <h3 className="about__text">Стримеров</h3>
         </div>
