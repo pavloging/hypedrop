@@ -1,17 +1,28 @@
-export default function SeparationStreamers({ onSeparation }) {
+export default function SeparationStreamers({ value, onSeparation }) {
   return (
-    <div className="people-streamers__1">
-      <div className="people-streamers__2">
+    <div className="separation-streamers__1">
+      <div
+        className={
+          value ? "separation-streamers__2" : "separation-streamers__2  active"
+        }
+      >
         <div
-          className="people-streamers__3"
+          className="separation-streamers__3"
           onClick={() => onSeparation(false)}
         >
-          <span className="people-streamers__4">Стримы</span>
+          <span className="separation-streamers__4">Стримеры</span>
         </div>
       </div>
-      <div className="people-streamers__2">
-        <div className="people-streamers__3" onClick={() => onSeparation(true)}>
-          <span className="people-streamers__4">Стримеры</span>
+      <div
+        className={
+          value ? "separation-streamers__2  active" : "separation-streamers__2"
+        }
+      >
+        <div
+          className="separation-streamers__3"
+          onClick={() => onSeparation(true)}
+        >
+          <span className="separation-streamers__4">Стримы</span>
         </div>
       </div>
     </div>

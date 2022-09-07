@@ -1,0 +1,80 @@
+.streams {
+  display: grid;
+  gap: 0px;
+  grid-template-columns: repeat(auto-fill, minmax(322px, 1fr));
+  margin: 6px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+
+  &__container {
+    margin: 6px;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: $element-color;
+    width: calc(100% - 12px);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    position: relative;
+  }
+
+  &__header {
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  &__avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    margin-right: 12px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__author {
+    font-weight: 900;
+    font-size: 16px;
+    color: $text-white-color;
+  }
+  &__description {
+    font-weight: 400;
+    color: $text-color;
+    font-size: 14px;
+    transition: all 0.2s ease 0s;
+  }
+  &__view-count {
+    font-weight: 900;
+    font-size: 22px;
+    margin: 0 0 0 10px;
+  }
+
+  &__flex {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+  }
+
+  &__view {
+    display: flex;
+    background: $hover-color;
+    padding: 3px 8px;
+    border-radius: 15px;
+  }
+
+  &__prevu {
+    height: 200px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    margin: 0px 12px 12px;
+  }
+}

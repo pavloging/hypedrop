@@ -6,6 +6,7 @@ import Footer from "../components/common/Footer";
 import ListInviteScreamers from "../components/ui/Streamers/ListInviteScreamers";
 import PeopleStreamers from "../components/ui/Streamers/PeopleStreamers";
 import SeparationStreamers from "../components/ui/Streamers/SeparationStreamers";
+import Streams from "../components/ui/Streamers/Streams/Streams";
 
 export default function Streamers() {
   const [streamers, setStreamers] = useState(false);
@@ -17,8 +18,14 @@ export default function Streamers() {
     <>
       <Header />
       <Aside />
-      <SeparationStreamers onSeparation={separation} />
-      {streamers ? <PeopleStreamers /> : <ListInviteScreamers />}
+      <SeparationStreamers value={streamers} onSeparation={separation} />
+      {streamers ? (
+        <Streams />
+      ) : (
+        <>
+          <PeopleStreamers /> <ListInviteScreamers />
+        </>
+      )}
       {/* <PeopleStreamers />
       <ListInviteScreamers /> */}
       <Footer />

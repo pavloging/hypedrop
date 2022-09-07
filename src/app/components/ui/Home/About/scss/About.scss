@@ -11,7 +11,7 @@
   }
   &__achievements {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
   }
   &__user {
     display: flex;
@@ -20,27 +20,21 @@
     margin: 24px;
   }
   &__img {
+    height: 160px;
     width: 200px;
     transition: 0.4s;
+    padding: 6%;
     &:hover {
-      width: 220px;
+      padding: 0%;
       transition: 0.4s;
     }
   }
   &__img.axe {
     transform: translateX(-20px);
     width: 180px;
-    &:hover {
-      width: 200px;
-      transition: 0.4s;
-    }
   }
   &__img.courier {
     width: 170px;
-    &:hover {
-      width: 190px;
-      transition: 0.4s;
-    }
   }
 
   &__numbers {
