@@ -54,7 +54,7 @@ export default function PopSkins() {
         >
           {skins.items.map((el, index) => (
             <SwiperSlide key={index}>
-              <img className="pop-skins__img" src={el.icon} alt="" />
+              <img className="pop-skins__img" src={el.icon} alt="skin" />
               <p className="pop-skins__paragraph">{el.ru_name}</p>
               <p className="pop-skins__paragraph">От {el.price}</p>
             </SwiperSlide>

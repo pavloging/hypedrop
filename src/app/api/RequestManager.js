@@ -2,6 +2,7 @@ import { useState } from "react";
 import { getOpenToken } from "../utils/getOpenToken";
 
 export default function RequestManager(method, url, data) {
+  console.log(data);
   const [res, setRes] = useState();
   const axios = require("axios");
 
@@ -26,6 +27,6 @@ export default function RequestManager(method, url, data) {
     .then(function () {
       // выполняется всегда
     });
-
+  console.log(res);
   return res;
 }

@@ -1,0 +1,74 @@
+.view-skins {
+  display: flex;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  margin: 6px 46px;
+  gap: 4px;
+  min-height: 0px;
+
+  &__container {
+    position: relative;
+    margin: 12px 6px 0px;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-direction: column;
+    background: #1f2643;
+    width: 160px;
+    max-width: 160px;
+    height: 140px;
+    transition: all 0.3s ease 0s;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+
+  &__background {
+    width: 100px;
+    height: 100px;
+    background-position: center center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    filter: drop-shadow(rgb(75, 105, 255) 0px 0px 15px);
+  }
+
+  &__span {
+    font-size: 14px;
+    color: $text-white-color;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 0px;
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__coin {
+    margin: 6px;
+    width: 25%;
+  }
+
+  &__price-span {
+    font-size: 14px;
+    color: $text-color;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 0px;
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

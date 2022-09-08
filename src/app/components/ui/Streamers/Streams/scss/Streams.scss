@@ -2,10 +2,14 @@
   display: grid;
   gap: 0px;
   grid-template-columns: repeat(auto-fill, minmax(322px, 1fr));
-  margin: 6px;
+  margin: 6px 36px;
   -webkit-box-pack: center;
   justify-content: center;
   position: relative;
+
+  &__link {
+    margin: 2px;
+  }
 
   &__container {
     margin: 6px;
@@ -18,6 +22,11 @@
     cursor: pointer;
     transition: all 0.3s ease 0s;
     position: relative;
+
+    &:hover,
+    &:active {
+      background: $hover-color;
+    }
   }
 
   &__header {
