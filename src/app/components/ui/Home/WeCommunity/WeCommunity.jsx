@@ -1,10 +1,20 @@
+import { useEffect, useState } from "react";
 import RequestManager from "../../../../api/RequestManager";
 import trovo from "../../../../assets/home/etc/trovo-colored.svg";
 import twitch from "../../../../assets/home/etc/twitch-colored.svg";
 import youtube from "../../../../assets/home/etc/youtube-colored.svg";
 
 export default function WeCommunity() {
-  const streamers = RequestManager("get", "streamers", null);
+  const [streamers, setStreamers] = useState();
+
+  const loadStreamers = async () => {
+    const resp = await RequestManager("GET", "streamers");
+    setStreamers(resp);
+  };
+
+  useEffect(() => {
+    if (!streamers) loadStreamers();
+  }, []);
 
   function validateLive(streamer) {
     return Object.values(streamer.platforms).some((platform) => platform.live);

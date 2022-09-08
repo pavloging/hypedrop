@@ -1,5 +1,5 @@
 import RequestManager from "../../../../api/RequestManager";
-import React from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -13,12 +13,28 @@ import { Autoplay, Pagination, Navigation, Keyboard } from "swiper";
 import { Link } from "react-router-dom";
 
 export default function PopSkins() {
-  const skins = RequestManager("POST", "store/items/search", {
-    game: "csgo",
-    sort: "pop",
-    limit: 48,
-    min_price: 200,
-  });
+  // const skins = RequestManager("POST", "store/items/search", {
+  //   game: "csgo",
+  //   sort: "pop",
+  //   limit: 48,
+  //   min_price: 200,
+  // });
+
+  const [skins, setSkins] = useState();
+
+  const loadStreamers = async () => {
+    const resp = await RequestManager("POST", "store/items/search", {
+      game: "csgo",
+      sort: "pop",
+      limit: 48,
+      min_price: 200,
+    });
+    setSkins(resp);
+  };
+
+  useEffect(() => {
+    if (!skins) loadStreamers();
+  }, []);
 
   if (skins && skins.items.length === 50) skins.items.splice(1, 2);
 

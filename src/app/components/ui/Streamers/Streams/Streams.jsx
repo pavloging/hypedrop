@@ -1,14 +1,29 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import RequestManager from "../../../../api/RequestManager";
 import eye from "../../../../assets/streamers/eye.svg";
 
 export default function Streams() {
-  const streams = RequestManager("get", "videos", null);
+  const [streams, setStreams] = useState();
+
+  const loadStreamers = async () => {
+    const resp = await RequestManager("GET", "videos");
+    setStreams(resp);
+  };
+
+  useEffect(() => {
+    if (!streams) loadStreamers();
+  }, []);
+
   const validateUrl404 = {
     first:
       "https://yt3.ggpht.com/c6rlBx6A8XUGLyc4KrOu-mw2j86O2HA-ECbYkdZF7s_pVcwKiUWAn1B8V2Vq9DbEq2PosgZ0=s240-c-k-c0x00ffffff-no-rj",
     last: "https://yt3.ggpht.com/ytc/AMLnZu_hXUZxaygYSvGO743iFxfuQ4kHUt0Acro6bwyefg=s240-c-k-c0x00ffffff-no-rj",
   };
+
+  if (streams) {
+    console.log(streams);
+  }
 
   function data(ms) {
     const dateInMs = ms;

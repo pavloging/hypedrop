@@ -1,10 +1,22 @@
+import { useEffect, useState } from "react";
 import RequestManager from "../../../../api/RequestManager";
 import trovo from "../../../../assets/home/etc/trovo-colored.svg";
 import twitch from "../../../../assets/home/etc/twitch-colored.svg";
 import youtube from "../../../../assets/home/etc/youtube-colored.svg";
 
 export default function PeopleStreamers() {
-  const streamers = RequestManager("get", "streamers", { limit: 48 });
+  const [streamers, setStreamers] = useState();
+
+  const loadStreamers = async () => {
+    const resp = await RequestManager("GET", "streamers", { limit: 48 });
+    setStreamers(resp);
+  };
+
+  useEffect(() => {
+    if (!streamers) loadStreamers();
+  }, []);
+
+  // const streamers = RequestManager("get", "streamers", { limit: 48 });
 
   function validateLive(streamer) {
     return Object.values(streamer.platforms).some((platform) => platform.live);

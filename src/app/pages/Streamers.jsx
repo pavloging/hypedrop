@@ -26,8 +26,6 @@ export default function Streamers() {
           <PeopleStreamers /> <ListInviteScreamers />
         </>
       )}
-      {/* <PeopleStreamers />
-      <ListInviteScreamers /> */}
       <Footer />
     </>
   );

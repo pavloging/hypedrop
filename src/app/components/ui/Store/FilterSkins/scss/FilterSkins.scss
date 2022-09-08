@@ -1,2 +1,14 @@
-// .filter-skins {
-// }
+.filter-skins {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  &__button {
+    transition: 0.4s;
+    &:hover,
+    &:active {
+      background: $button-live-active;
+    }
+  }
+}
