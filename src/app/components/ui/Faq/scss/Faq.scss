@@ -9,6 +9,7 @@
     background: $element-color;
     padding: 32px;
     border-radius: 12px;
+    margin: 12px;
   }
 
   &__panel-up {
@@ -18,10 +19,13 @@
 
   &__panel-btn {
     margin-bottom: 6px;
-    background: $main-color;
+    color: $text-color;
+    font-weight: 500;
+    background: none;
+    text-align: start;
     &:hover,
     &:active {
-      background-color: $hover-color;
+      background: $hover-color;
     }
   }
 }
