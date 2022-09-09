@@ -4,10 +4,15 @@ import Home from "../pages/Home";
 import Streamers from "../pages/Streamers";
 import Store from "../pages/Store";
 import Promo from "../pages/Promo";
-import NoPage from "../pages/NoPage";
+// import NoPage from "../pages/NoPage";
+import Faq from "../menu/Faq";
 
 export default function Navigation() {
-  return <RootNavigator />;
+  return (
+    <>
+      <RootNavigator /> <MenuNavigaror />
+    </>
+  );
 }
 
 function RootNavigator() {
@@ -17,7 +22,15 @@ function RootNavigator() {
       <Route path="/streamers" exact component={Streamers} />
       <Route path="/store" exact component={Store} />
       <Route path="/promo" exact component={Promo} />
-      <Route path="/" component={NoPage} />
+      {/* <Route path="/" component={NoPage} /> */}
+    </Switch>
+  );
+}
+
+function MenuNavigaror() {
+  return (
+    <Switch>
+      <Route path="/faq" exact component={Faq} />
     </Switch>
   );
 }

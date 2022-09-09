@@ -13,8 +13,6 @@ import other from "../../../../assets/store/csgo/other-white.png";
 export default function FilterSkins({ page, nextPage, previousPage }) {
   return (
     <div className="filter-skins">
-      <h1>FilterSkins</h1>
-
       <div className="filter-skins__filter">
         <div className="filter-skins__field">
           <div className="filter-skins__list">
@@ -126,7 +124,7 @@ export default function FilterSkins({ page, nextPage, previousPage }) {
           <img className="filter-skins__img left" src={arrow} alt="" />
         </button>
         <h4 className="filter-skins__page">{page === 1 ? null : page - 1}</h4>
-        <h1 className="filter-skins__page main">{page}</h1>
+        <h3 className="filter-skins__page main">{page}</h3>
         <h4 className="filter-skins__page">{page + 1}</h4>
         <button className="filter-skins__btn" onClick={nextPage}>
           <img className="filter-skins__img right" src={arrow} alt="" />

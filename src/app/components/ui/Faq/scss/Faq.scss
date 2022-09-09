@@ -1,0 +1,27 @@
+.faq {
+  display: flex;
+  height: 90vh;
+
+  &__panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $element-color;
+    padding: 32px;
+    border-radius: 12px;
+  }
+
+  &__panel-up {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__panel-btn {
+    margin-bottom: 6px;
+    background: $main-color;
+    &:hover,
+    &:active {
+      background-color: $hover-color;
+    }
+  }
+}

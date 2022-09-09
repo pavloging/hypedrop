@@ -27,7 +27,22 @@
     width: 10%;
     position: absolute;
     filter: invert(1);
-    opacity: 0.2;
+  }
+
+  &__coin.one {
+    transform: translateX(240px) translateY(-40px) rotate(19deg);
+    filter: hue-rotate(45deg);
+    width: 7%;
+  }
+
+  &__coin.two {
+    transform: translateX(-240px) translateY(-40px) rotate(-19deg);
+    filter: grayscale(1);
+    width: 7%;
+  }
+
+  &__text {
+    z-index: 100;
   }
 
   &__title {
@@ -37,6 +52,10 @@
 
   &__span {
     color: $text-white-color;
+    z-index: 100;
+  }
+
+  &__button {
     z-index: 100;
   }
 
