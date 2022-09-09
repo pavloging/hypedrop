@@ -16,17 +16,18 @@
     -webkit-box-align: center;
     align-items: center;
     margin: 12px 8px 0px;
-    padding: 4px;
     background: $element-color;
     border-radius: 6px;
+    &:hover {
+      background-color: $button-live-active;
+    }
   }
   &__2.active {
     background-color: $button-live-active;
   }
 
   &__3 {
-    // width: 128px;
-    height: 36px;
+    height: 40px;
     margin: 4px;
     cursor: pointer;
     display: flex;
@@ -37,10 +38,6 @@
     overflow: hidden;
     border-radius: 4px;
     transition: all 0.2s ease 0s;
-
-    &:hover {
-      background-color: $button-live-active;
-    }
   }
 
   &__4 {

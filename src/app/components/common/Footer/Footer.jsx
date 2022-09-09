@@ -7,48 +7,48 @@ export default function Footer() {
       <div className="footer__logo">
         <img src={logo} alt="logo" />
       </div>
-      <div className="footer__main">
-        <Link to={"/"}>
-          <h2>Главная</h2>
+      <div className="footer__container">
+        <Link to={"/"} className="footer__link">
+          <h2 className="footer__li">Главная</h2>
         </Link>
-        <Link to={"/streamers"}>
-          <li>Стримы</li>
+        <Link to={"/streamers"} className="footer__link">
+          <li className="footer__li">Стримы</li>
         </Link>
-        <Link to={"/store"}>
-          <li>Магазин</li>
+        <Link to={"/store"} className="footer__link">
+          <li className="footer__li">Магазин</li>
         </Link>
-        <Link to={"/promo"}>
-          <li>Промокоды</li>
+        <Link to={"/promo"} className="footer__link">
+          <li className="footer__li">Промокоды</li>
         </Link>
       </div>
-      <div className="footer__extra">
+      <div className="footer__container">
         <h2>Дополнительно</h2>
-        <Link to={"/streamers"}>
-          <li>Личный кабинет</li>
+        <Link to={"/streamers"} className="footer__link">
+          <li className="footer__li">Личный кабинет</li>
         </Link>
-        <Link to={"/store"}>
-          <li>Статус предмета</li>
+        <Link to={"/store"} className="footer__link">
+          <li className="footer__li">Статус предмета</li>
         </Link>
-        <Link to={"/promo"}>
-          <li>FAQ</li>
+        <Link to={"/promo"} className="footer__link">
+          <li className="footer__li">FAQ</li>
         </Link>
       </div>
-      <div className="footer__information">
+      <div className="footer__container">
         <h2>Информация</h2>
-        <Link to={"/streamers"}>
-          <li>Политика приватности</li>
+        <Link to={"/streamers"} className="footer__link">
+          <li className="footer__li">Политика приватности</li>
         </Link>
-        <Link to={"/store"}>
-          <li>Условия использования</li>
+        <Link to={"/store"} className="footer__link">
+          <li className="footer__li">Условия использования</li>
         </Link>
-        <Link to={"/promo"}>
-          <li>Политика цен</li>
+        <Link to={"/promo"} className="footer__link">
+          <li className="footer__li">Политика цен</li>
         </Link>
-        <Link to={"/promo"}>
-          <li>Политика возврата</li>
+        <Link to={"/promo"} className="footer__link">
+          <li className="footer__li">Политика возврата</li>
         </Link>
       </div>
-      <div className="footer__network">{/* <img src="" alt="" /> */}</div>
+      <div className="footer__container">{/* <img src="" alt="" /> */}</div>
     </div>
   );
 }

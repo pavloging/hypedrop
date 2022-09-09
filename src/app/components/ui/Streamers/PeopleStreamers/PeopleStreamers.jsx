@@ -3,23 +3,33 @@ import RequestManager from "../../../../api/RequestManager";
 import trovo from "../../../../assets/home/etc/trovo-colored.svg";
 import twitch from "../../../../assets/home/etc/twitch-colored.svg";
 import youtube from "../../../../assets/home/etc/youtube-colored.svg";
+import getNowStreamersLive from "../../../../utils/getNowStreamersLive";
 
 export default function PeopleStreamers() {
+  const [streamersData, setStreamersData] = useState();
+  // Загрузка с backend...
   const [streamers, setStreamers] = useState();
 
-  const loadStreamers = async () => {
+  const loadData = async () => {
     const resp = await RequestManager("GET", "streamers", { limit: 48 });
     setStreamers(resp);
+    setStreamersData(resp);
   };
 
   useEffect(() => {
-    if (!streamers) loadStreamers();
-  }, []);
+    if (!streamers) loadData();
+  }, [streamers]);
+  // Загрузка с backend...
 
-  // const streamers = RequestManager("get", "streamers", { limit: 48 });
-
-  function validateLive(streamer) {
-    return Object.values(streamer.platforms).some((platform) => platform.live);
+  function filterValue(value) {
+    if (value.length === 0) {
+      setStreamers(streamersData);
+    } else {
+      const filter = streamersData.filter((el) =>
+        el.name.toLowerCase().includes(value.toLowerCase())
+      );
+      setStreamers(filter);
+    }
   }
 
   return streamers ? (
@@ -28,6 +38,7 @@ export default function PeopleStreamers() {
         <input
           className="people-streamers__input"
           placeholder="Поиск по нику"
+          onChange={(e) => filterValue(e.target.value)}
           type="text"
         />
       </div>
@@ -82,12 +93,12 @@ export default function PeopleStreamers() {
             {/* <Link to={`/watch/${liveStream}`}> */}
             <button
               className={
-                validateLive(el)
+                getNowStreamersLive(el)
                   ? "people-streamers__button-active"
                   : "people-streamers__button"
               }
             >
-              {validateLive(el) ? "В сети" : "Не в сети"}
+              {getNowStreamersLive(el) ? "В сети" : "Не в сети"}
             </button>
             {/* </Link> */}
           </div>

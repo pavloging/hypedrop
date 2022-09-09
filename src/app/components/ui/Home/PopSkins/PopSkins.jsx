@@ -13,16 +13,10 @@ import { Autoplay, Pagination, Navigation, Keyboard } from "swiper";
 import { Link } from "react-router-dom";
 
 export default function PopSkins() {
-  // const skins = RequestManager("POST", "store/items/search", {
-  //   game: "csgo",
-  //   sort: "pop",
-  //   limit: 48,
-  //   min_price: 200,
-  // });
-
+  // Загрузка с backend...
   const [skins, setSkins] = useState();
 
-  const loadStreamers = async () => {
+  const loadData = async () => {
     const resp = await RequestManager("POST", "store/items/search", {
       game: "csgo",
       sort: "pop",
@@ -33,8 +27,9 @@ export default function PopSkins() {
   };
 
   useEffect(() => {
-    if (!skins) loadStreamers();
-  }, []);
+    loadData();
+  }, [skins]);
+  // Загрузка с backend...
 
   if (skins && skins.items.length === 50) skins.items.splice(1, 2);
 

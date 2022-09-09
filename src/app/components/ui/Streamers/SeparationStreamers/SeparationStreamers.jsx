@@ -1,3 +1,5 @@
+import live from "../../../../assets/streamers/live-streaming.svg";
+
 export default function SeparationStreamers({ value, onSeparation }) {
   return (
     <div className="separation-streamers__1">
@@ -22,7 +24,9 @@ export default function SeparationStreamers({ value, onSeparation }) {
           className="separation-streamers__3"
           onClick={() => onSeparation(true)}
         >
-          <span className="separation-streamers__4">Стримы</span>
+          <span className="separation-streamers__4">
+            <img style={{ width: "36px" }} src={live} alt="" />
+          </span>
         </div>
       </div>
     </div>

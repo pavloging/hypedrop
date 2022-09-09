@@ -1,3 +1,6 @@
+.stream {
+  margin: 40px;
+}
 .streams {
   display: grid;
   gap: 0px;
@@ -30,7 +33,7 @@
   }
 
   &__header {
-    padding: 12px;
+    padding: 12px 12px 0 12px;
     display: flex;
     flex-direction: row;
     -webkit-box-align: center;
@@ -65,6 +68,20 @@
     font-weight: 900;
     font-size: 22px;
     margin: 0 0 0 10px;
+  }
+
+  &__name {
+    width: 300px;
+    height: 30px;
+    padding: 0 14px;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__description.title {
+    font-size: 12px;
   }
 
   &__flex {

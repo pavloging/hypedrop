@@ -9,15 +9,21 @@ import ViewSkins from "../components/ui/Store/ViewSkins/ViewSkins";
 export const SkinsContext = React.createContext();
 
 export default function Store() {
-  const [page, setPage] = useState(2);
+  const [page, setPage] = useState(1);
 
-  const handlePage = () => setPage((prev) => prev + 1);
+  const nextPage = () => setPage((prev) => prev + 1);
+
+  const previousPage = () => setPage((prev) => prev - 1);
 
   return (
     <SkinsContext.Provider value={page}>
       <Header />
       <Aside />
-      <FilterSkins handlePage={handlePage} />
+      <FilterSkins
+        page={page}
+        nextPage={nextPage}
+        previousPage={previousPage}
+      />
       <ViewSkins />
       <Footer />
     </SkinsContext.Provider>

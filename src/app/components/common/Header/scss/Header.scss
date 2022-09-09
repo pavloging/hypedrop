@@ -10,6 +10,14 @@
   flex-direction: row;
   align-items: center;
   background-color: $main-color;
+  z-index: 1000;
+
+  &__info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
   &__text {
     height: 36px;
@@ -54,5 +62,60 @@
     font-size: 16px;
     margin: 0px 8px;
     color: $text-color;
+  }
+
+  &__menu {
+    display: flex;
+    margin-right: $aside-width;
+  }
+
+  &__steam {
+    margin-right: 5px;
+    width: 48px;
+    margin-top: 5px;
+    border-radius: 6px 6px 0px 6px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  &__steam-img {
+    width: 42px;
+    animation-name: steam;
+    animation-duration: 3s;
+    transition: 1s;
+    &:hover,
+    &:active {
+      transform: rotate(-360deg);
+    }
+  }
+
+  &__chat {
+    position: relative;
+    right: -5px;
+    height: 100%;
+    width: 48px;
+    margin-top: 4px;
+    border-radius: 6px 6px 0px 6px;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover,
+    &:active {
+      background: $hover-color;
+    }
+  }
+
+  &__chat-img {
+    margin-top: 4px;
+    width: 48px;
+    cursor: pointer;
+  }
+}
+
+@keyframes steam {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

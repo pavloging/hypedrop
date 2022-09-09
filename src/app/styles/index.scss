@@ -15,6 +15,8 @@ span,
 h1,
 h2,
 h3,
+h4,
+h5,
 p,
 a {
   color: $text-color;
@@ -25,7 +27,6 @@ input {
   -webkit-box-flex: 1;
   flex-grow: 1;
   height: 36px;
-  margin-top: 16px;
   padding: 0px 14px;
   border: 2px solid $hover-color;
   background: $hover-color;
@@ -37,6 +38,7 @@ input {
   outline: none;
   transition: all 0.2s ease 0s;
   flex-shrink: 0;
+  z-index: 100;
 }
 button {
   height: 36px;
@@ -46,7 +48,6 @@ button {
   font-size: 14px;
   font-weight: 600;
   font-family: Mulish, sans-serif;
-  margin-top: 12px;
   background-color: $hover-color;
   color: $text-white-color;
   cursor: pointer;

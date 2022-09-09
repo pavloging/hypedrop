@@ -5,16 +5,18 @@ import twitch from "../../../../assets/home/etc/twitch-colored.svg";
 import youtube from "../../../../assets/home/etc/youtube-colored.svg";
 
 export default function WeCommunity() {
+  // Загрузка с backend...
   const [streamers, setStreamers] = useState();
 
-  const loadStreamers = async () => {
+  const loadData = async () => {
     const resp = await RequestManager("GET", "streamers");
     setStreamers(resp);
   };
 
   useEffect(() => {
-    if (!streamers) loadStreamers();
-  }, []);
+    loadData();
+  }, [streamers]);
+  // Загрузка с backend...
 
   function validateLive(streamer) {
     return Object.values(streamer.platforms).some((platform) => platform.live);
